@@ -17,6 +17,7 @@ class UserController {
         error: "User already exists!",
       });
     }
+
     const user = usersRepository.create({
       name, email
     });
