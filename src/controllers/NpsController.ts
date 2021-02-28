@@ -36,6 +36,14 @@ class NpsController {
       nps: calculate
     });
   }
+
+  async show(request: Request, response: Response) {
+    const surveysUsersRepository = getCustomRepository(SurveysUsersRepository);
+
+    const allSuveysUsers = await surveysUsersRepository.find();
+
+    return response.json(allSuveysUsers);
+  }
 }
 
 export { NpsController };
