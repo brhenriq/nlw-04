@@ -84,3 +84,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - Editor:  [Visual Studio Code](https://code.visualstudio.com/)  → Extensions:  [SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)
 - Teste de API:  [Insomnia](https://insomnia.rest/)
+
+### **Teste as rotas**
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=NPS-Calculator&uri=https%3A%2F%2Fgithub.com%2Fbrhenriq%2Fnlw-04%2Fblob%2Fmain%2Ftested_routes.json)
