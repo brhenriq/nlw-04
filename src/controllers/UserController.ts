@@ -1,9 +1,8 @@
 import { Request, Response } from 'express';
 import { getCustomRepository } from 'typeorm';
 import { UsersRepository } from '../repositories/UsersRepository';
-
-import * as yup from 'yup';
 import { AppError } from '../errors/AppError';
+import * as yup from 'yup';
 
 class UserController {
   async create(request: Request, response: Response) {
@@ -37,6 +36,14 @@ class UserController {
     await usersRepository.save(user);
 
     return response.status(201).json(user);
+  }
+
+  async show(request: Request, response: Response) {
+    const usersRepository = getCustomRepository(UsersRepository);
+
+    const allUsers = await usersRepository.find();
+
+    return response.json(allUsers);
   }
 }
 
